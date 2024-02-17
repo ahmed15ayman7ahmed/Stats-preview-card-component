@@ -1,0 +1,87 @@
+:root{
+    --main-background: hsl(233, 47%, 7%);
+    --card-background: hsl(244, 38%, 16%);
+    --Soft-violet :  hsl(277, 64%, 61%);
+    --White : hsl(0, 0%, 100%);
+    --Slightly : hsla(0, 0%, 100%, 0.75);
+    --Slightly-stat : hsla(0, 0%, 100%, 0.6);
+}
+body{
+    font-family: "Inter", sans-serif;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-color: var(--main-background);
+    color: var(--White);
+}
+.sec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+.child1{
+    background-color: var(--card-background);
+    display: flex;
+    height: 60vh;
+}
+.child1 .text{
+    width: 50%;
+    padding: 20px;
+}
+.child1 .text .dis{
+    font-size: 15px;
+}
+.child1 .text h1 span{
+    color: var(--Soft-violet);
+}
+.child1 .text .num {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.child1 .image{
+    background-image: url(./images/image-header-desktop.jpg);
+    width: 50%;
+    height: 100%;
+}
+.child1 .image div{
+    background-color:hsla(277, 64%, 61%, 0.565);
+    width: 100%;
+    height: 100%;
+}
+@media (max-width: 375px) {
+    .sec{
+        padding: 20px;
+    }
+    .child1{
+        border-radius: 25px;
+        text-align: center;
+        width: 340px;
+        flex-direction: column-reverse;
+        height: 90vh;
+    }
+    .child1 .text{
+        padding: 0;
+        width: 100%;
+    }
+    .child1 .text h1 {
+        font-size: 20px;
+    }
+    .child1 .image{
+        border-radius: 25px 25px 0 0;
+        background-image: url(./images/image-header-mobile.jpg);
+        background-size: cover;
+        width: 100%;
+    }
+    .child1 .image div{
+        border-radius: 25px 25px 0 0;
+    }
+    .child1 .text .num {
+        flex-direction: column;
+    }
+    
+
+}
